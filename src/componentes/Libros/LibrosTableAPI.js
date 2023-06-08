@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-
+//Es la llamada a la API y muestra los libros con uan Tabla tradicional
 const LibrosTableAPI = () => {
   const [Libros, setLibros] = useState([]);
 
