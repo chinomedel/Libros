@@ -4,6 +4,7 @@ import { useTable, useFilters, useGlobalFilter, useSortBy } from 'react-table';
 import ColumnFilter from './ColumnFilter';
 import GlobalFilter from './GlobalFilter';
 import LibrosTabla from './LibrosTabla';
+import LibrosData from '../Data/LibrosData';
 
 const Libros = () => {
   const [libros, setLibros] = useState([]);
@@ -12,19 +13,6 @@ const Libros = () => {
     const options = { year: 'numeric' };
     return new Date(date).toLocaleDateString(undefined, options);
   };
-
-  useEffect(() => {
-    const fetchLibros = async () => {
-      try {
-        const response = await axios.get('https://anapioficeandfire.com/api/books');
-        setLibros(response.data);
-      } catch (error) {
-        console.log('Error al obtener el listado de libros:', error);
-      }
-    };
-
-    fetchLibros();
-  }, []);
 
   const columns = React.useMemo(
     () => [
@@ -55,6 +43,7 @@ const Libros = () => {
     <div className='container mx-auto px-10'>
       <h1 className='text-center text-indigo-900 text-3xl mt-8 font-bold'>Listado de Libros</h1>
       <GlobalFilter state={state} setGlobalFilter={setGlobalFilter} />
+      <LibrosData setLibros={setLibros} />
       <LibrosTabla
         getTableProps={getTableProps}
         getTableBodyProps={getTableBodyProps}
