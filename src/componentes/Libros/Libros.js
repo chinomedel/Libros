@@ -20,6 +20,28 @@ const Libros = () => {
   return (
     <div>
       <h1>Listado de Libros</h1>
+      <table>
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Título</th>
+              <th>Autor(es)</th>
+              <th>Páginas</th>
+              <th>Año publicación</th>
+            </tr>
+          </thead>
+          <tbody>
+          {Libros.map((libro) => (
+            <tr>
+              <td>{libro.key}</td>
+              <td>{libro.name}</td>
+              <td>{libro.authors.join(', ')}</td>
+              <td>{libro.numberOfPages}</td>
+              <td>{libro.released}</td>
+            </tr>
+          ))};
+          </tbody>
+      </table>
       {Libros.map((libro) => (
         <div key={libro.url}>
           <h2>Título: {libro.name}</h2>
