@@ -74,12 +74,13 @@ const Libros = () => {
                 <th {...column.getHeaderProps(column.getSortByToggleProps())} 
                 className='border border-slate-300 bg-indigo-700 text-white h-10'>
                   {column.render('Header')}
-                  <div>
-                   {column.canFilter ? column.render('Filter'):null}
-                  </div>
                   <span>
                     {column.isSorted ? (column.isSortedDesc ? ' ↓' : ' ↑') : ''}
                   </span>
+                  <div>
+                   {column.canFilter ? column.render('Filter'):null}
+                  </div>
+                  
                   
                 </th>
               ))}

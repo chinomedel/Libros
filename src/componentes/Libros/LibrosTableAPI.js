@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const Libros = () => {
+const LibrosTableAPI = () => {
   const [Libros, setLibros] = useState([]);
 
   useEffect(() => {
@@ -55,4 +55,4 @@ const Libros = () => {
   );
 };
 
-export default Libros;
+export default LibrosTableAPI;
