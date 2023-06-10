@@ -2,8 +2,9 @@ import React from "react";
 import Navbar from "./componentes/Navbar/Navbar";
 import Navbarresponsive from "./componentes/Navbar/Navbarresponsive";
 import Libros from "./componentes/ReactTable/Libros";
-import FormularioLibros from "./componentes/Formularios/ForumularioLibros";
+import FormularioLibros from "./componentes/Formularios/FormularioLibros";
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import { Button } from "./stories/Button";
 
 
 
@@ -11,6 +12,7 @@ function App() {
   return (
     <div>
       <Navbarresponsive />
+      <Button label="Ingresar" primary={true}/>
       <BrowserRouter>
         
         <Routes>
