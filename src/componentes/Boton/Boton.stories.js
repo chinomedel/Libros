@@ -1,4 +1,4 @@
-import {Boton} from "./Boton"
+import { Boton } from "./Boton";
 
 export default {
     label:"Ingresa libro jsx",

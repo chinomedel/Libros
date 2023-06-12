@@ -1,6 +1,6 @@
 
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import { Button } from "../../stories/Button";
+
 
 const FormularioLibros = ()=>{
     
@@ -53,7 +53,7 @@ const FormularioLibros = ()=>{
                     </div>
                     
                     <button type="submit" className="block h-20 w-full border border-indigo-600 m-5 bg-indigo-600 text-white">Crear Libro</button>
-                    <Button label="Crear Libro" primary={true} type="submit"/>
+                   
                 </Form>
             </Formik>
             </div>
