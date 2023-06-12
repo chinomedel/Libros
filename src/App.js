@@ -4,8 +4,7 @@ import Navbarresponsive from "./componentes/Navbar/Navbarresponsive";
 import Libros from "./componentes/ReactTable/Libros";
 import FormularioLibros from "./componentes/Formularios/FormularioLibros";
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
-import { Button } from "./stories/Button";
-import Boton from "./componentes/Boton/Boton"
+
 
 
 
@@ -15,8 +14,7 @@ function App() {
   return (
     <div>
       <Navbarresponsive />
-      <Button label="Ingresar" primary={true}/>
-      <Boton/>
+      
       <BrowserRouter>
         
         <Routes>
